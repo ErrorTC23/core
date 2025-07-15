@@ -3,6 +3,8 @@
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 
+PLATFORMS: list[str] = []
+
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up the integration from a config entry.
@@ -14,5 +16,5 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     Returns:
         bool: True if the setup is successful, False otherwise.
     """
-    hass.config_entries.async_setup_platforms(entry, [])
+    hass.config_entries.async_forward_entry_setups(entry, [])
     return True
