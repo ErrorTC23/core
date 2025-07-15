@@ -24,6 +24,7 @@ class MyLight(LightEntity):
         """Initialize the light entity."""
         self._name = config["name"]
         self._is_on = False
+        self._attr_unique_id = f"my_integration_light_{config['name']}"
 
     @property
     def name(self) -> str:

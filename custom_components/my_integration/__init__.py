@@ -16,5 +16,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     Returns:
         bool: True if the setup is successful, False otherwise.
     """
+    await hass.config_entries.async_forward_entry_setups(entry, ["light"])
     hass.config_entries.async_forward_entry_setups(entry, [])
     return True
