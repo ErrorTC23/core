@@ -1,6 +1,10 @@
-from homeassistant.components.light import LightEntity  # noqa: D100
+import logging  # noqa: D100
+
+from homeassistant.components.light import LightEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant  # 新增 HomeAssistant 类型导入
+
+_LOGGER = logging.getLogger(__name__)
 
 
 async def async_setup_entry(
@@ -9,6 +13,7 @@ async def async_setup_entry(
     async_add_entities,
 ) -> None:  # 明确返回类型为 None
     """Set up the light entity from a config entry."""
+    _LOGGER.info("配置条目数据: %s", entry.data)
     async_add_entities([MyLight(entry.data)])  # 加载灯实体
 
 
