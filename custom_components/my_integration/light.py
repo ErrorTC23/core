@@ -23,8 +23,9 @@ class MyLight(LightEntity):
     def __init__(self, config: dict) -> None:
         """Initialize the light entity."""
         self._name = config["name"]
+        self._ip = config["ip"]
         self._is_on = False
-        self._attr_unique_id = f"my_integration_light_{config['name']}"
+        self._attr_unique_id = f"my_integration_light_{self._name}_{self._ip}"
 
     @property
     def name(self) -> str:
