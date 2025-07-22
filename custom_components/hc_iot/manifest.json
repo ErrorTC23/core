@@ -1,0 +1,14 @@
+{
+  "domain": "hc_iot",
+  "name": "Hc Iot",
+  "codeowners": ["@hc2025"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://gitlab.zhuneng.cn/home-assistant/hc-iot",
+  "iot_class": "cloud_push",
+  "loggers": ["hc_iot"],
+  "integration_type": "hub",
+  "issue_tracker": "https://gitlab.zhuneng.cn/home-assistant/hc-iot/-/issues",
+  "requirements": ["paho-mqtt==2.1.0"],
+  "version": "0.0.1"
+}
