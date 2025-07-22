@@ -7,11 +7,6 @@
   "containerEnv": {
     "PYTHONASYNCIODEBUG": "1"
   },
-  "mounts": [
-    // 映射本地的 hc_iot 到容器中
-    "source=D:\\code\\python\\hc_iot,target=${containerWorkspaceFolder}/config/custom_components/hc_iot,type=bind",
-    "source=D:\\code\\python\\frontend,target=/workspaces/frontend,type=bind,consistency=cached"
-  ],
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
